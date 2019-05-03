@@ -1,0 +1,87 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  min-width: 100vw;
+}
+
+.score {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &--team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--divider {
+    font-size: 30px;
+  }
+
+  &--points {
+    font-size: 20px;
+  }
+
+  &--logo {
+    height: 100px;
+  }
+}
+
+.box-score {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  justify-content: center;
+  align-content: center;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+
+    justify-content: center;
+
+    &-team {
+      flex-basis: 80%;
+    }
+
+    &-scores {
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+    }
+
+    &-period {
+      margin-right: 30px;
+    }
+
+    &-mlb {
+      margin-right: 15px;
+    }
+
+    &-total {
+      margin-right: 40px;
+    }
+
+    &-grey {
+      color: lightgrey;
+    }
+  }
+}
