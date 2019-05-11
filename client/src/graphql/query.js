@@ -21,6 +21,7 @@ export const CREATE_NBADATA_MUTATION = `
           defensive_rebounds
           offensive_rebounds
           position
+          points
         }
         away_stats {
           assists
@@ -30,6 +31,7 @@ export const CREATE_NBADATA_MUTATION = `
           defensive_rebounds
           offensive_rebounds
           position
+          points
         }
         away_totals {
           points
