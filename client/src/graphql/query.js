@@ -22,6 +22,7 @@ export const CREATE_NBADATA_MUTATION = `
           offensive_rebounds
           position
           points
+          is_starter
         }
         away_stats {
           assists
@@ -32,6 +33,7 @@ export const CREATE_NBADATA_MUTATION = `
           offensive_rebounds
           position
           points
+          is_starter
         }
         away_totals {
           points
@@ -84,6 +86,14 @@ export const CREATE_MLBDATA_MUTATION = `
         away_period_scores
         home_period_scores
         away_pitchers {
+          display_name
+          innings_pitched
+          hits_allowed
+          earned_runs
+          walks
+          strike_outs
+        }
+        home_pitchers {
           display_name
           innings_pitched
           hits_allowed

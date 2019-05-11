@@ -113,7 +113,7 @@ module.exports = gql`
     away_team: Team
     event_information: Event
     home_batter_totals: BatterTotals
-    home_batters: Batter
+    home_batters: [Batter]
     home_errors: Float
     home_fielding: [Fielder]
     home_period_scores: [Float]

@@ -14,12 +14,11 @@ class NBA extends Component {
     const client = new GraphQLClient("http://localhost:4000");
     const data = await client.request(CREATE_NBADATA_MUTATION);
     this.setState({ data: data.createNBAData.games, loading: false });
-    console.log(this.state);
   };
 
   render() {
     const { data, loading } = this.state;
-    console.log(data);
+
     return (
       <>
         {!loading && (

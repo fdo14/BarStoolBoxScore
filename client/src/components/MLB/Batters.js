@@ -4,6 +4,7 @@ import "./MLB.scss";
 class Batters extends Component {
   renderScores = () => {
     let stats = [];
+    console.log(this.props);
     let show =
       this.props.show === "away" ? this.props.awayStats : this.props.homeStats;
     for (let player of show) {
