@@ -13,9 +13,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <div class="ui two item menu">
+        <div className="ui two item menu">
           <a
-            class={`${this.state.classNBA} item`}
+            className={`${this.state.classNBA} item`}
             onClick={() =>
               this.setState({ show: "NBA", classNBA: "active", classMLB: "" })
             }
@@ -23,7 +23,7 @@ class App extends Component {
             NBA
           </a>
           <a
-            class={`${this.state.classMLB} item`}
+            className={`${this.state.classMLB} item`}
             onClick={() =>
               this.setState({ show: "", classNBA: "", classMLB: "active" })
             }

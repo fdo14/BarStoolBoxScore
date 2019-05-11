@@ -9,18 +9,18 @@ class Players extends Component {
     for (let player of show) {
       const position = player.is_starter ? player.position : "";
       stats.push(
-        <>
-          <div class="grid-container__player">
+        <React.Fragment key={player.display_name}>
+          <div className="grid-container__player">
             {player.display_name} &middot;
             <span style={{ color: "lightgrey" }}> {position}</span>
           </div>
-          <div class="grid-container__items">{player.minutes}</div>
-          <div class="grid-container__items">
+          <div className="grid-container__items">{player.minutes}</div>
+          <div className="grid-container__items">
             {player.offensive_rebounds + player.defensive_rebounds}
           </div>
-          <div class="grid-container__items">{player.assists}</div>
-          <div class="grid-container__items">{player.points}</div>
-        </>
+          <div className="grid-container__items">{player.assists}</div>
+          <div className="grid-container__items">{player.points}</div>
+        </React.Fragment>
       );
     }
     return <>{stats}</>;
@@ -28,14 +28,14 @@ class Players extends Component {
 
   render() {
     return (
-      <div class="grid-container">
-        <div class="grid-container__player grid-container__player-grey">
+      <div className="grid-container">
+        <div className="grid-container__player grid-container__player-grey">
           Player
         </div>
-        <div class="grid-container__items">Min</div>
-        <div class="grid-container__items">Reb</div>
-        <div class="grid-container__items">Ast</div>
-        <div class="grid-container__items">Pts</div>
+        <div className="grid-container__items">Min</div>
+        <div className="grid-container__items">Reb</div>
+        <div className="grid-container__items">Ast</div>
+        <div className="grid-container__items">Pts</div>
         {this.renderScores()}
       </div>
     );

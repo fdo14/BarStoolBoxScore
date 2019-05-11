@@ -18,7 +18,6 @@ class MLB extends Component {
 
   render() {
     const { data, loading } = this.state;
-    console.log(data);
     return (
       <>
         {!loading && (

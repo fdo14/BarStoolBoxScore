@@ -13,7 +13,7 @@ class BoxScore extends Component {
     let periods = [];
     for (let i = 1; i <= length; i++) {
       periods.push(
-        <p className="box-score__header-period">
+        <p className="box-score__header-period" key={`BoxScoreHeader${i}`}>
           <strong>{i}</strong>
         </p>
       );
@@ -23,8 +23,14 @@ class BoxScore extends Component {
 
   renderScores = i => {
     let scores = [];
+    let count = 0;
     for (let score of this.props.periods[i]) {
-      scores.push(<p className="box-score__header-period">{score}</p>);
+      scores.push(
+        <p className="box-score__header-period" key={`BoxScoreHeader${count}`}>
+          {score}
+        </p>
+      );
+      count++;
     }
     return <>{scores}</>;
   };
